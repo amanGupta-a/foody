@@ -1,5 +1,6 @@
 import express from "express"
-import dotenv from "dotenv"
+import dotenv from "dotenv";
+dotenv.config();
 import connectdb from "./config/db.js";
 import cookieParser from "cookie-parser";
 import authRouter from "./routes/auth.routes.js";
@@ -14,10 +15,7 @@ import adminRouter from "./routes/admin.routes.js";
 import http, { Server } from "http"
 import { Server as SocketServer } from "socket.io"
 import { socketHandler } from "./socket.js";
-
-
-
-dotenv.config({ path: new URL("./.env", import.meta.url).pathname });
+import "./utils/mail.js"
 const app = express()
 
 const server = http.createServer(app)

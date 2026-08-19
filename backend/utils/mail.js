@@ -5,7 +5,9 @@ dotenv.config();
 // Normalize env vars in case they include extra spaces/quotes.
 const smtpUser = (process.env.EMAIL || '').trim().replace(/^['"]|['"]$/g, '');
 const smtpPass = (process.env.PASS || '').trim().replace(/^['"]|['"]$/g, '');
-
+console.log("EMAIL PRESENT:", !!process.env.EMAIL);
+console.log("PASS PRESENT:", !!process.env.PASS);
+console.log("EMAIL:", process.env.EMAIL);
 export const transporter = nodemailer.createTransport({
   service: 'Gmail',
   port: 465,
