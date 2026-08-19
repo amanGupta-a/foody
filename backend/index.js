@@ -32,23 +32,13 @@ const io = new SocketServer(server , {
 
 app.set("io" , io)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Foody backend is running successfully 🚀",
+        status: "OK"
+    });
+});
 
 app.use(cors({
     origin: "http://localhost:5173",
