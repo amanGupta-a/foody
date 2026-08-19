@@ -1,2 +1,2 @@
-Backend Running @ https://foody-2-7ezt.onrender.com
+Backend Running @ https://foody-1unq.onrender.com
 Frontend @ npx plugins add vercel/vercel-plugin
